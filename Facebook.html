@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .grid-container{
+            display: grid;
+            position: relative;
+            background-color: rgb(61, 61, 125);
+            height: 80px;
+            grid-template-columns: 4fr 1fr 1fr 1fr;
+        }
+        .grid-container>div{
+            color: white;
+        }
+
+         .grid-container1{
+            display: grid;
+            position: relative;
+            background-color: rgb(221 231 234);;
+            height: 800px;
+            grid-template-columns: 2.5fr 2fr ;
+        }
+        .grid-container1>div{
+            color: rgb(17, 17, 17);
+        }
+        img{
+            width: 500px;
+            height: 300px;
+           margin-top: 2px;
+           margin-left: 80px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div><h1 style="position: relative;color: white; text-indent: 25%; bottom: 2px; font-size:45px;">facebook</h1></div>
+        <div><h6>Email or Phone<br><input type="text"><br>
+            <input type="checkbox">Keep me logged in
+        </h6></div>
+        <div><h6>Password<br><input type="text"><br>
+            Forgot your password?
+        </h6></div>
+        <div><button style="position: relative; top: 35%; background-color: rgb(88, 88, 135); color: white;">Log In</button></div>
+    </div>
+
+    <div class="grid-container1">
+        <div><h4 style="color: rgb(52, 52, 91); text-indent: 25%; top: 5px;">Facebook helps you connect and share with </h4>
+            <h4 style="color: rgb(52, 52, 91); text-indent: 25%; margin-top: -15px;">the people in your life.</h4>
+        <br><img src="WhatsApp Image 2025-09-17 at 12.38.24 AM.jpeg" alt=""></div>
+        <div><p style="font-size: 30px; margin-top: 10px;" ><b>Sign Up</b></p>
+            <p style="margin-top: -25px;">It's free and always be.</p>
+            <input type="text" name="" id="" placeholder="First Name" style="height: 28px; ">
+            <input type="text" placeholder="Last Name"  style="height: 28px;">
+           <input type="text" placeholder="Your Email"  style="height: 28px;  width:338px; margin-top: 5px;" >
+            <input type="text" placeholder="Re-enter Email"  style="height: 28px; width:338px; margin-top: 5px;">
+            <input type="text" placeholder="New Password" style="height: 28px;  width:338px; margin-top: 5px;">
+            <h4 style="margin-bottom: -18px; margin-top: 10px;">Birthday:</h4>
+            <div class="container">
+            <select name="months" id="months" style="float: left; height: 28px;">
+                 <option value="Month">Month:</option>
+        <option value="jan">JAN</option>
+        <option value="feb">FEB</option>
+        <option value="mar">MAR</option>
+        <option value="apr">APR</option>
+        <option value="may">MAY</option>
+        <option value="jun">JUN</option>
+        <option value="jul">JUL</option>
+        <option value="aug">AUG</option>
+        <option value="sep">SEP</option>
+        <option value="oct">OCT</option>
+        <option value="nov">NOV</option>
+        <option value="dec">DEC</option>
+    
+    </select>
+     <select name="" id="" style="float: left; margin-left: 5px; height: 28px;">
+        <option value="Day">Day:</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+    
+    </select>
+
+    <select name="year" id="year" style="float: left; margin-left: 5px; margin-right:5px;height :28px">
+                 <option value="Year">Year:</option>
+        <option value="1992">1992</option>
+        <option value="1993">1993</option>
+        <option value="1994">1994</option>
+        <option value="1995">1995</option>
+        <option value="1996">1996</option>
+        <option value="1997">1997</option>
+        <option value="1998">1998</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <option value="2002">2002</option>
+        <option value="2003">2003</option>
+        </select>
+            <a href="" style="text-decoration: none; "><h6 >Why do I need to provide my <br>birthday?</h6></a>
+
+            </div>
+            <div style="margin-top: -10px;"><input type="radio" name="" id="">Female
+            <input type="radio" name="" id="">Male
+            </div>
+          <p style="font-size: small;">By clicking Sign Up, you agree to our Terms and that you have <br>read our Data Use Policy,including our Cookie Use</p>
+            <button style="color: white; background-color: rgb(65, 177, 34); width:200px;
+            height:33px;border-radius: 5%; font-size: 20px; margin-bottom: -30px;">Sign Up</button>
+            <hr style="border: none; width: 20%px; height: 1px; background-color: black; margin-top: 20px;">
+          
+            <p style="font-size: small;">Create a Page for a celebrity,band or business</p>
+        </div>
+        
+</body>
+</html>
