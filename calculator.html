@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    
+    
+
+#display {
+  width: 26.5%;
+  height: 60px;
+  margin-left: 450px;
+  margin-bottom: 15px;
+  margin-top: 80px;
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+button {
+  height: 60px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #22b8b0;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #1aa29a;
+}
+
+.zero {
+  grid-column: span 2;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="calculator">
+    <input type="text" id="display" readonly>
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="appendValue('/')">/</button>
+      <button onclick="appendValue('*')">×</button>
+      <button onclick="backspace()">←</button>
+
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button onclick="appendValue('-')">-</button>
+
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button onclick="appendValue('+')">+</button>
+
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button onclick="calculate()">=</button>
+
+      <button class="zero" onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+    </div>
+  </div>
+  <script>
+    // Get the display element where numbers and results show
+    var display = document.getElementById('display');
+
+    // Function to add a value (number or operator) to the display
+    function appendValue(v) {
+      // Get the last character in the display
+      var last = display.value[display.value.length-1];
+      // Check if the value is an operator or dot
+      if ((v=='+'||v=='-'||v=='*'||v=='/'||v=='.')) {
+        // Don't start with operator (except dot)
+        if (display.value=='' && v!='.') return;
+        // Don't allow two operators in a row
+        if ((last=='+'||last=='-'||last=='*'||last=='/') && (v=='+'||v=='-'||v=='*'||v=='/')) return;
+        // Don't allow two dots in a row
+        if (v=='.' && last=='.') return;
+      }
+      // Add the value to the display
+      display.value = display.value + v;
+    }
+
+    // Function to clear the display
+    function clearDisplay() {
+      display.value = '';
+    }
+
+    // Function to remove the last character (backspace)
+    function backspace() {
+      display.value = display.value.slice(0,-1);
+    }
+
+    // Function to calculate the result
+    function calculate() {
+      try {
+        // Use eval to compute the expression
+        display.value = eval(display.value);
+      } catch (e) {
+        // If there's an error, show 'Error'
+        display.value = 'Error';
+      }
+    }
+  </script>
+</body>
+</html>
